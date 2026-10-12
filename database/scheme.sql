@@ -1,1 +1,13 @@
--- структура базы данных онлайн-библиотеки
+CREATE TABLE users (
+id INT AUTO_INCREMENT PRIMARY KEY,
+login VARCHAR(50) NOT NULL UNIQUE,
+password VARCHAR(255) NOT NULL,
+role VARCHAR(20) NOT NULL DEFAULT 'user'
+);
+CREATE TABLE books (
+id INT AUTO_INCREMENT PRIMARY KEY,
+title VARCHAR(255) NOT NULL,
+author VARCHAR(255) NOT NULL,
+genre VARCHAR(100) NOT NULL,
+description TEXT
+);
